@@ -9,7 +9,7 @@ export const theme = {
   font: {
     familyPrimary: '"Work Sans", sans-serif',
     weightBody: 400,
-    weightHeading: 600,
+    weightHeading: 700,
   },
   borderRadius: {
     sm: '0.25rem',
@@ -18,7 +18,7 @@ export const theme = {
     round: '50%',
   },
   shadow: {
-    lg: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+    lg: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
   },
 };
 
