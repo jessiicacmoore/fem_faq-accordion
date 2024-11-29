@@ -7,8 +7,6 @@ type ContainerProps = React.HtmlHTMLAttributes<HTMLDivElement> & {
 };
 
 const StyledWrapper = styled.div`
-  font-family: sans-serif;
-  color: ${({ theme }) => theme.colors.text};
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -22,7 +20,7 @@ const StyledWrapper = styled.div`
 const StyledContainer = styled.div`
   width: 85vw;
   max-width: 640px;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borderRadius.lg};
   box-shadow: ${({ theme }) => theme.shadow.lg};

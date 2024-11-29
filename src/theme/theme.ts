@@ -6,6 +6,11 @@ export const theme = {
     gray: '#8f898e',
     white: '#fff',
   },
+  font: {
+    familyPrimary: '"Work Sans", sans-serif',
+    weightBody: 400,
+    weightHeading: 600,
+  },
   borderRadius: {
     sm: '0.25rem',
     md: '0.375rem',
