@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import mobileImg from '@/assets/background-pattern-mobile.svg';
+import mobileImg from '../assets/background-pattern-mobile.svg';
 
 type ContainerProps = React.HtmlHTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;

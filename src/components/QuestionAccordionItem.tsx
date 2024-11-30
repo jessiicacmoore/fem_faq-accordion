@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Question as QuestionType } from '@/constants/questions';
+import { Question as QuestionType } from '../constants/questions';
 
 type StyledAccordionPanelProps = {
   $isOpen: boolean;

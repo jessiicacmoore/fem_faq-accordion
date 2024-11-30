@@ -1,8 +1,8 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { theme } from '@/theme/theme';
-import Container from '@/components/Container';
-import Title from '@/components/Title';
-import QuestionAccordionList from '@/components/QuestionAccordionList';
+import { theme } from './theme/theme';
+import Container from './components/Container';
+import Title from './components/Title';
+import QuestionAccordionList from './components/QuestionAccordionList';
 
 const GlobalStyles = createGlobalStyle`
   body {
