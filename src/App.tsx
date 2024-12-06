@@ -2,7 +2,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { theme } from './theme/theme';
 import Container from './components/Container';
 import Title from './components/Title';
-import QuestionAccordionList from './components/QuestionAccordionList';
+import Accordion from './components/Accordion';
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -30,7 +30,7 @@ function App() {
         <Title>
           FAQs<span className="sr-only"> (Frequently Asked Questions)</span>
         </Title>
-        <QuestionAccordionList />
+        <Accordion />
       </Container>
     </ThemeProvider>
   );
