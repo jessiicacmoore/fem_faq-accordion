@@ -4,12 +4,15 @@ export const theme = {
     secondary: '#f9eeff',
     text: '#331537',
     gray: '#8f898e',
+    lightGray: '#f0f0f0',
     white: '#fff',
   },
   font: {
     familyPrimary: '"Work Sans", sans-serif',
     weightBody: 400,
     weightHeading: 700,
+    weightAccordionButton: 600,
+    sizeAccordionButton: '1.125rem',
   },
   borderRadius: {
     sm: '0.25rem',

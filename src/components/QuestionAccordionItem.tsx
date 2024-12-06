@@ -2,12 +2,28 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Question as QuestionType } from '../constants/questions';
 
-type StyledAccordionPanelProps = {
-  $isOpen: boolean;
-};
+const StyledAccordionItem = styled.li`
+  & + li {
+    border-top: ${({ theme }) => `1px solid ${theme.colors.lightGray}`};
+  }
+`;
 
-const StyledAccordionPanel = styled.div<StyledAccordionPanelProps>`
+const StyledAccordionButton = styled.button`
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: ${({ theme }) => theme.font.weightAccordionButton};
+  font-size: ${({ theme }) => theme.font.sizeAccordionButton};
+  color: ${({ theme }) => theme.colors.text};
+`;
+
+const StyledAccordionPanel = styled.div<{ $isOpen: boolean }>`
   display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
+  color: ${({ theme }) => theme.colors.gray};
+  line-height: 1.5;
 `;
 
 function QuestionAccordionItem({ question }: { question: QuestionType }) {
@@ -16,15 +32,15 @@ function QuestionAccordionItem({ question }: { question: QuestionType }) {
   const contentId = `question${question.id}-content`;
 
   return (
-    <li>
+    <StyledAccordionItem>
       <h2 id={headingId}>
-        <button
+        <StyledAccordionButton
           onClick={() => setIsOpen((prev) => !prev)}
           aria-controls={contentId}
           aria-expanded={isOpen}
         >
           <span>{question.question}</span>
-        </button>
+        </StyledAccordionButton>
       </h2>
       <StyledAccordionPanel
         id={contentId}
@@ -34,7 +50,7 @@ function QuestionAccordionItem({ question }: { question: QuestionType }) {
       >
         <p>A: {question.answer}</p>
       </StyledAccordionPanel>
-    </li>
+    </StyledAccordionItem>
   );
 }
 
